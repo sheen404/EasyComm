@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "97179764853",
+    "project_id": "easycomm-a1e39",
+    "storage_bucket": "easycomm-a1e39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97179764853:android:7085364b9e775d9b91103c",
+        "android_client_info": {
+          "package_name": "harsheenkaur.example.easy_comm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97179764853-m97euk2eo4c3dl3tuckutgaa6ucht5ch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdGBDpTQcHbD9fN4a-ZD9t7CZPCsB_9Js"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97179764853-m97euk2eo4c3dl3tuckutgaa6ucht5ch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
