@@ -2,6 +2,7 @@ import 'package:easy_comm/brain.dart';
 import 'package:easy_comm/constants.dart';
 import 'package:easy_comm/drawing_painter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 
 class CharacterRecognition extends StatefulWidget {
@@ -17,6 +18,7 @@ class _RecognizerScreen extends State<CharacterRecognition> {
   AppBrain brain = AppBrain();
   String headerText = 'Header placeholder';
   String footerText = '.....';
+  FlutterTts flutterTts = FlutterTts();
 
   void _cleanDrawing() {
     setState(() {
@@ -36,6 +38,11 @@ class _RecognizerScreen extends State<CharacterRecognition> {
 
   @override
   Widget build(BuildContext context) {
+
+    speak() async{
+      await flutterTts.speak(footerText);
+    }
+
     return Scaffold(
       //backgroundColor: Colors.black,
       appBar: AppBar(
@@ -118,6 +125,7 @@ class _RecognizerScreen extends State<CharacterRecognition> {
                           style: Theme.of(context).textTheme.headline,
                         ),
                       ),
+                      IconButton(onPressed: () => speak(), icon: Icon(Icons.play_arrow, size: 25,))
                     ],
                   ),
                 ),

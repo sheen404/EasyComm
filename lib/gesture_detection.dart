@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:tflite/tflite.dart';
 
@@ -17,6 +18,7 @@ class _GestureDetectionState extends State<GestureDetection> {
   late File _image;
   bool _loading = false;
   late List _output;
+  FlutterTts flutterTts = FlutterTts();
 
   pickImage() async{
     var image = await picker.getImage(source: ImageSource.camera);
@@ -76,6 +78,9 @@ class _GestureDetectionState extends State<GestureDetection> {
 
   @override
   Widget build(BuildContext context) {
+    speak() async{
+      await flutterTts.speak('${_output[0]['label']}');
+    }
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -151,7 +156,9 @@ class _GestureDetectionState extends State<GestureDetection> {
                         ),)),
                 ),
               ],
-            ),)
+            ),
+            ),
+            IconButton(onPressed: () => speak(), icon: Icon(Icons.play_arrow, size: 25,))
           ],
         ),
       ),
