@@ -34,6 +34,8 @@ dependencies:
   curved_navigation_bar: ^0.3.7
   rxdart: ^0.27.1
   painter: ^2.0.0
+  image: ^3.0.2
+
 
 dev_dependencies:
   flutter_test:
