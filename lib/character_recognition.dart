@@ -46,6 +46,7 @@ class _RecognizerScreen extends State<CharacterRecognition> {
     return Scaffold(
       //backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Color(0xff004AAD),
         title: Text('Character Recognition'),
       ),
       body: Container(

@@ -1,6 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:easy_comm/gesture_detection.dart';
-import 'package:easy_comm/speech_to_gesture.dart';
+//import 'package:easy_comm/speech_to_gesture.dart';
 import 'package:easy_comm/tutorial.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     Tutorial(),
     CharacterRecognition(),
     GestureDetection(),
-    SpeechToGesture()
+    //SpeechToGesture()
   ];
   int _activePage = 0;
 
@@ -26,11 +26,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _tabItems[_activePage],
-      backgroundColor: Colors.black,
+      //backgroundColor: Color(0xff004AAD),
       bottomNavigationBar: CurvedNavigationBar(
         index: _activePage,
         height: 70.0,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
+        buttonBackgroundColor: Color(0xff004AAD),
+        color: Color(0xff004AAD),
         items: <Widget>[
           Image.asset(
             "images/tutorial.png",
@@ -47,11 +49,11 @@ class _HomePageState extends State<HomePage> {
             height: 50,
             width: 50,
           ),
-          Image.asset(
-            "images/speech.png",
-            height: 30,
-            width: 30,
-          ),
+          // Image.asset(
+          //   "images/speech.png",
+          //   height: 30,
+          //   width: 30,
+          // ),
         ],
         animationDuration: Duration(milliseconds: 200),
         onTap: (index) {

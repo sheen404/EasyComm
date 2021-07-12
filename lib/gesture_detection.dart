@@ -82,8 +82,9 @@ class _GestureDetectionState extends State<GestureDetection> {
       await flutterTts.speak('${_output[0]['label']}');
     }
     return Scaffold(
-      backgroundColor: Colors.black,
+      //backgroundColor: ,
       appBar: AppBar(
+        backgroundColor: Color(0xff004AAD),
         title: Text("Gesture Detection"),
       ),
       body: Container(
@@ -108,7 +109,7 @@ class _GestureDetectionState extends State<GestureDetection> {
               ) : Container(child: Column(
                 children: [
                   Container(
-                    height: 250,
+                    height: 200,
                     child: Image.file(_image),
                   ),
                   SizedBox(height: 20.0,),
@@ -128,7 +129,7 @@ class _GestureDetectionState extends State<GestureDetection> {
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
-                    color: const Color(0xff1F1F1F),
+                    color: const Color(0xff004AAD),
                   ),
                   child: TextButton(
                       onPressed: (){
@@ -136,7 +137,8 @@ class _GestureDetectionState extends State<GestureDetection> {
                       },
                       child: Text("Take a Photo",
                         style: TextStyle(
-                            fontSize: 20.0
+                            fontSize: 20.0,
+                          color: Colors.white
                         ),)),
                 ),
                 Container(
@@ -152,7 +154,8 @@ class _GestureDetectionState extends State<GestureDetection> {
                       },
                       child: Text("Camera Roll",
                         style: TextStyle(
-                            fontSize: 20.0
+                            fontSize: 20.0,
+                            color: Colors.white
                         ),)),
                 ),
               ],

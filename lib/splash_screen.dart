@@ -21,10 +21,10 @@ class _SplashScreenState extends State<SplashScreen> {
     );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-          primaryColor: Colors.black,
-          backgroundColor: Colors.black,
-          accentColor: Colors.black),
+      // theme: ThemeData.dark().copyWith(
+      //     primaryColor: Colors.black,
+      //     backgroundColor: Color(0xff004AAD),
+      //     accentColor: Colors.black),
       home: splash,
     );
   }
