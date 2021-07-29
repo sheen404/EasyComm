@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //theme: ThemeData.dark().copyWith(backgroundColor: Color(0xff004AAD)),
       home: SplashScreen(),
     );
   }
